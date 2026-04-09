@@ -1,0 +1,4 @@
+[build]
+  base = "exam-prep"
+  publish = "build"
+  command = "npm run build"

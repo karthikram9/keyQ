@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { ArrowLeft, ChevronDown, ChevronUp, Check, Square, Play, CheckSquare, Moon, Sun, X } from 'lucide-react';
+import { ArrowLeft, ChevronDown, Check, Moon, Sun, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 function App() {
@@ -644,7 +644,6 @@ function App() {
   const [selectedSubject, setSelectedSubject] = useState(null);
   const [selectedUnit, setSelectedUnit] = useState(null);
   const [activeFilter, setActiveFilter] = useState('all');
-  const [expandedUnits, setExpandedUnits] = useState({});
   const [doneQuestions, setDoneQuestions] = useState(() => {
     try {
       const saved = localStorage.getItem('keyQ-progress');
@@ -724,7 +723,6 @@ function App() {
 
   const navigateToSubject = (subject) => {
     setSelectedSubject(subject);
-    setExpandedUnits({});
     setView('subject');
   };
 
