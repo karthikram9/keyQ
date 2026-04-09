@@ -981,12 +981,11 @@ function App() {
         onMouseMove={handleMouseMove}
         onMouseLeave={handleMouseLeave}
         style={{
-          background: isDark ? 'rgba(255,255,255,0.04)' : 'var(--card-bg)',
+          background: isDark ? 'rgba(255, 255, 255, 0.08)' : 'rgba(255, 255, 255, 0.45)',
           border: isDark ? '1px solid rgba(124,58,237,0.3)' : '1px solid var(--card-border)',
           borderRadius: '20px', padding: '28px',
           cursor: 'pointer', transition: 'transform 0.1s ease, box-shadow 0.3s ease',
           boxShadow: isDark ? '0 4px 24px rgba(0,0,0,0.4)' : '0 2px 12px rgba(0,0,0,0.06)',
-          backdropFilter: 'blur(16px)',
           position: 'relative', overflow: 'hidden',
           display: 'flex', flexDirection: 'column', height: '100%', minHeight: '220px'
         }}
