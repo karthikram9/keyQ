@@ -975,7 +975,7 @@ function App() {
 
     const { done, total } = getSubjectDoneCount(subject, doneQuestions);
     const pct = total > 0 ? Math.round((done / total) * 100) : 0;
-
+    const isDark = theme === 'focus';
     return (
       <div
         ref={cardRef}
@@ -983,11 +983,11 @@ function App() {
         onMouseMove={handleMouseMove}
         onMouseLeave={handleMouseLeave}
         style={{
-          background: 'rgba(255,255,255,0.04)',
-          border: '1px solid rgba(124,58,237,0.3)',
+          background: isDark ? 'rgba(255,255,255,0.04)' : 'var(--card-bg)',
+          border: isDark ? '1px solid rgba(124,58,237,0.3)' : '1px solid var(--card-border)',
           borderRadius: '20px', padding: '28px',
           cursor: 'pointer', transition: 'transform 0.1s ease, box-shadow 0.3s ease',
-          boxShadow: '0 4px 24px rgba(0,0,0,0.4)',
+          boxShadow: isDark ? '0 4px 24px rgba(0,0,0,0.4)' : '0 2px 12px rgba(0,0,0,0.06)',
           backdropFilter: 'blur(16px)',
           position: 'relative', overflow: 'hidden',
           display: 'flex', flexDirection: 'column', height: '100%', minHeight: '220px'
@@ -996,30 +996,32 @@ function App() {
         <div style={{
           position: 'absolute', top: 0, left: 0,
           width: '120px', height: '120px',
-          background: 'radial-gradient(circle, rgba(124,58,237,0.2) 0%, transparent 70%)',
+          background: isDark
+            ? 'radial-gradient(circle, rgba(124,58,237,0.2) 0%, transparent 70%)'
+            : `radial-gradient(circle, ${subject.lightColor} 0%, transparent 70%)`,
           pointerEvents: 'none'
         }} />
 
-        <h3 style={{ color: '#fff', fontWeight: 800, fontSize: '18px', marginBottom: '8px' }}>
+        <h3 style={{ color: 'var(--text-main)', fontWeight: 800, fontSize: '18px', marginBottom: '8px' }}>
           {subject.name}
         </h3>
-        <p style={{ color: 'rgba(255,255,255,0.4)', fontSize: '13px', marginBottom: '20px' }}>
+        <p style={{ color: 'var(--text-muted)', fontSize: '13px', marginBottom: '20px' }}>
           {total} Questions · 5 Units
         </p>
 
         <div style={{
-          background: 'rgba(255,255,255,0.08)', borderRadius: '999px',
-          height: '6px', overflow: 'hidden', marginBottom: '10px'
+          background: isDark ? 'rgba(255,255,255,0.08)' : 'var(--card-border)',
+          borderRadius: '999px', height: '6px', overflow: 'hidden', marginBottom: '10px'
         }}>
           <div style={{
             width: `${pct}%`, height: '100%',
-            background: 'linear-gradient(90deg, #7c3aed, #06b6d4)',
+            background: isDark ? 'linear-gradient(90deg, #7c3aed, #06b6d4)' : subject.color,
             borderRadius: '999px', transition: 'width 0.6s ease',
-            boxShadow: '0 0 8px rgba(124,58,237,0.6)'
+            boxShadow: isDark ? '0 0 8px rgba(124,58,237,0.6)' : 'none'
           }} />
         </div>
 
-        <p style={{ color: 'rgba(255,255,255,0.5)', fontSize: '13px' }}>
+        <p style={{ color: 'var(--text-muted)', fontSize: '13px' }}>
           {pct}% complete · {done}/{total} done
         </p>
       </div>
@@ -1074,7 +1076,7 @@ function App() {
         {renderCSS()}
         {/* Particle-like decorative lines */}
         <div style={{
-          position: 'absolute', inset: 0, 
+          position: 'absolute', inset: 0,
           backgroundImage: `
             linear-gradient(rgba(124,58,237,0.05) 1px, transparent 1px),
             linear-gradient(90deg, rgba(124,58,237,0.05) 1px, transparent 1px)
@@ -1084,9 +1086,9 @@ function App() {
         }} />
 
         <div style={{ position: 'relative', zIndex: 1, padding: '80px 24px 40px', minHeight: '100vh', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', textAlign: 'center' }}>
-          
+
           {/* Badge */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             style={{
@@ -1102,7 +1104,7 @@ function App() {
           </motion.div>
 
           {/* Hero Title */}
-          <motion.h1 
+          <motion.h1
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5 }}
@@ -1118,7 +1120,7 @@ function App() {
           </motion.h1>
 
           {/* Subtitle */}
-          <motion.p 
+          <motion.p
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.3 }}
@@ -1126,7 +1128,7 @@ function App() {
               fontSize: '18px', color: 'rgba(255,255,255,0.6)',
               maxWidth: '480px', lineHeight: 1.7, marginBottom: '48px'
             }}>
-            400 questions across 5 subjects.<br/>
+            400 questions across 5 subjects.<br />
             Track every mark. Own your exam.
           </motion.p>
 
@@ -1171,7 +1173,7 @@ function App() {
           <p style={{ fontSize: "14px", color: "var(--text-muted)", marginTop: "6px" }}>5 subjects · 5 units each</p>
         </motion.div>
 
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           style={{
@@ -1185,8 +1187,8 @@ function App() {
             { label: 'Max Marks', value: '5M' },
           ].map(stat => (
             <div key={stat.label} style={{
-              background: 'rgba(255,255,255,0.04)',
-              border: '1px solid rgba(255,255,255,0.08)',
+              background: 'var(--card-bg)',
+              border: '1px solid var(--card-border)',
               borderRadius: '16px', padding: '20px 32px',
               textAlign: 'center', minWidth: '120px'
             }}>
@@ -1196,7 +1198,7 @@ function App() {
                 WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent',
                 backgroundClip: 'text'
               }}>{stat.value}</div>
-              <div style={{ color: 'rgba(255,255,255,0.4)', fontSize: '13px', marginTop: '4px' }}>
+              <div style={{ color: 'var(--text-muted)', fontSize: '13px', marginTop: '4px' }}>
                 {stat.label}
               </div>
             </div>
@@ -1329,16 +1331,16 @@ function App() {
           <div className="glass-header" style={{ position: "sticky", top: 0, zIndex: 100, padding: "20px 0", margin: "20px -20px", paddingLeft: "20px", paddingRight: "20px" }}>
             <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "12px" }}>
               <div style={{ overflow: "hidden" }}>
-              <motion.h1 layout layoutId="unit-title" className="playfair" style={{ margin: 0, fontSize: "20px", color: "var(--text-main)", whiteSpace: "nowrap", textOverflow: "ellipsis" }}>{unit.name}</motion.h1>
-              <div style={{ fontSize: "11px", color: "var(--text-muted)", fontWeight: 600 }}>{sub.name} · Unit {selectedUnit + 1}</div>
+                <motion.h1 layout layoutId="unit-title" className="playfair" style={{ margin: 0, fontSize: "20px", color: "var(--text-main)", whiteSpace: "nowrap", textOverflow: "ellipsis" }}>{unit.name}</motion.h1>
+                <div style={{ fontSize: "11px", color: "var(--text-muted)", fontWeight: 600 }}>{sub.name} · Unit {selectedUnit + 1}</div>
+              </div>
+              <div style={{ textAlign: "right" }}>
+                <span style={{ fontSize: "16px", fontWeight: "900", color: "#FB8C00" }}>{Math.round((unitDoneCount / unitTotalQuestions) * 100)}%</span>
+              </div>
             </div>
-            <div style={{ textAlign: "right" }}>
-              <span style={{ fontSize: "16px", fontWeight: "900", color: "#FB8C00" }}>{Math.round((unitDoneCount / unitTotalQuestions) * 100)}%</span>
+            <div style={{ height: 6, background: "var(--card-border)", borderRadius: 3, overflow: "hidden", marginBottom: "20px", boxShadow: "inset 0 1px 2px rgba(0,0,0,0.05)" }}>
+              <motion.div initial={{ width: 0 }} animate={{ width: `${(unitDoneCount / unitTotalQuestions) * 100}%` }} transition={{ duration: 0.8, ease: [0.4, 0, 0.2, 1] }} style={{ height: "100%", background: 'linear-gradient(90deg, #FB8C00, #FFB74D)', boxShadow: "0 0 10px rgba(251, 140, 0, 0.4)" }} />
             </div>
-          </div>
-          <div style={{ height: 6, background: "var(--card-border)", borderRadius: 3, overflow: "hidden", marginBottom: "20px", boxShadow: "inset 0 1px 2px rgba(0,0,0,0.05)" }}>
-            <motion.div initial={{ width: 0 }} animate={{ width: `${(unitDoneCount / unitTotalQuestions) * 100}%` }} transition={{ duration: 0.8, ease: [0.4, 0, 0.2, 1] }} style={{ height: "100%", background: 'linear-gradient(90deg, #FB8C00, #FFB74D)', boxShadow: "0 0 10px rgba(251, 140, 0, 0.4)" }} />
-          </div>
             <div style={{ display: "flex", gap: "8px", overflowX: "auto", paddingBottom: "4px", scrollbarWidth: "none" }}>
               {[
                 { id: 'all', label: 'All' },
