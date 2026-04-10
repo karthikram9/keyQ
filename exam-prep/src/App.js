@@ -2,6 +2,12 @@ import React, { useState, useEffect } from 'react';
 import { ArrowLeft, ChevronDown, Check, Moon, Sun, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
+import frame1 from './assets/frame1.png';
+import frame2 from './assets/frame2.png';
+import frame3 from './assets/frame3.png';
+import frame4 from './assets/frame4.png';
+const frames = [frame1, frame2, frame3, frame4];
+
 function App() {
   const SUBJECTS = [
     {
@@ -974,6 +980,20 @@ function App() {
     const { done, total } = getSubjectDoneCount(subject, doneQuestions);
     const pct = total > 0 ? Math.round((done / total) * 100) : 0;
     const isDark = theme === 'focus';
+    
+    const getSubjectColors = (subjectId) => {
+      switch (subjectId) {
+        case 'ps': return { bg: '#EEF2FF', text: '#3730A3' };
+        case 'fm': return { bg: '#F0FDF4', text: '#166534' };
+        case 'ads': return { bg: '#FFF7ED', text: '#9A3412' };
+        case 'se': return { bg: '#EFF6FF', text: '#1E40AF' };
+        case 'os': return { bg: '#FDF4FF', text: '#7E22CE' };
+        default: return { bg: '#ffffff', text: '#333333' };
+      }
+    };
+    
+    const { bg: cardBg, text: cardText } = getSubjectColors(subject.id);
+
     return (
       <div
         ref={cardRef}
@@ -981,25 +1001,15 @@ function App() {
         onMouseMove={handleMouseMove}
         onMouseLeave={handleMouseLeave}
         style={{
-          background: isDark ? 'rgba(255, 255, 255, 0.08)' : 'rgba(255, 255, 255, 0.45)',
-          border: isDark ? '1px solid rgba(124,58,237,0.3)' : '1px solid var(--card-border)',
+          background: cardBg,
+          border: '1px solid var(--card-border)',
           borderRadius: '20px', padding: '28px',
-          cursor: 'pointer', transition: 'transform 0.1s ease, box-shadow 0.3s ease',
-          boxShadow: isDark ? '0 4px 24px rgba(0,0,0,0.4)' : '0 2px 12px rgba(0,0,0,0.06)',
+          cursor: 'pointer', transition: 'transform 0.1s ease',
           position: 'relative', overflow: 'hidden',
           display: 'flex', flexDirection: 'column', height: '100%', minHeight: '220px'
         }}
       >
-        <div style={{
-          position: 'absolute', top: 0, left: 0,
-          width: '120px', height: '120px',
-          background: isDark
-            ? 'radial-gradient(circle, rgba(124,58,237,0.2) 0%, transparent 70%)'
-            : `radial-gradient(circle, ${subject.lightColor} 0%, transparent 70%)`,
-          pointerEvents: 'none'
-        }} />
-
-        <h3 style={{ color: 'var(--text-main)', fontWeight: 800, fontSize: '18px', marginBottom: '8px' }}>
+        <h3 style={{ color: cardText, fontWeight: 600, fontSize: '18px', marginBottom: '8px', opacity: 1, filter: 'none', letterSpacing: '-0.01em' }}>
           {subject.name}
         </h3>
         <p style={{ color: 'var(--text-muted)', fontSize: '13px', marginBottom: '20px' }}>
@@ -1069,20 +1079,17 @@ function App() {
 
   if (view === 'landing') {
     return (
-      <div className="anime-bg">
+      <div className="landing-container">
         {renderCSS()}
-        {/* Particle-like decorative lines */}
-        <div style={{
-          position: 'absolute', inset: 0,
-          backgroundImage: `
-            linear-gradient(rgba(124,58,237,0.05) 1px, transparent 1px),
-            linear-gradient(90deg, rgba(124,58,237,0.05) 1px, transparent 1px)
-          `,
-          backgroundSize: '60px 60px',
-          pointerEvents: 'none'
-        }} />
+        
+        <div className="bg-slideshow">
+          {frames.map((src, i) => (
+            <div key={i} className="bg-slide" style={{ backgroundImage: `url(${src})` }} />
+          ))}
+          <div className="bg-overlay" />
+        </div>
 
-        <div style={{ position: 'relative', zIndex: 1, padding: '80px 24px 40px', minHeight: '100vh', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', textAlign: 'center' }}>
+        <div style={{ position: 'relative', zIndex: 2, textAlign: 'center' }}>
 
           {/* Badge */}
           <motion.div
@@ -1090,11 +1097,11 @@ function App() {
             animate={{ opacity: 1, y: 0 }}
             style={{
               display: 'inline-flex', alignItems: 'center', gap: '8px',
-              background: 'rgba(124,58,237,0.2)',
-              border: '1px solid rgba(124,58,237,0.5)',
+              color: '#ffffff',
+              border: '1px solid rgba(255,255,255,0.2)',
+              background: 'rgba(255,255,255,0.1)',
               borderRadius: '999px', padding: '6px 16px', marginBottom: '32px',
-              color: '#a78bfa', fontSize: '13px', fontWeight: 600,
-              boxShadow: '0 0 20px rgba(124,58,237,0.3)'
+              fontSize: '13px', fontWeight: 600
             }}>
             <span>⚡</span>
             <span>EXAM SEASON — FINAL FORM</span>
@@ -1122,8 +1129,9 @@ function App() {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.3 }}
             style={{
-              fontSize: '18px', color: 'rgba(255,255,255,0.6)',
-              maxWidth: '480px', lineHeight: 1.7, marginBottom: '48px'
+              fontSize: '18px', color: '#f0f0f0',
+              maxWidth: '480px', lineHeight: 1.7, marginBottom: '48px',
+              margin: '0 auto 48px auto'
             }}>
             400 questions across 5 subjects.<br />
             Track every mark. Own your exam.
