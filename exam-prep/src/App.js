@@ -22,116 +22,136 @@ function App() {
         {
           name: "Unit I — Descriptive Statistics",
           twoMark: [
-            { q: "Explain briefly the types of variables (dependent, independent, categorical, continuous).", tag: "★★★ Must Do", type: "Theory" },
-            { q: "Find the geometric mean of 2, 4, and 8.", tag: "★★★ Must Do", type: "Problem" },
-            { q: "Explain features of a good questionnaire.", tag: "★★ Important", type: "Theory" },
-            { q: "Explain measures of skewness — what do they indicate?", tag: "★★ Important", type: "Theory" },
-            { q: "Define Mean, Median, and Mode. State which measure is used when.", tag: "★★ Important", type: "Theory" },
-            { q: "What is the coefficient of variation? When is it used?", tag: "★★ Important", type: "Theory" },
-            { q: "Define moments of a distribution. What is the first moment about origin?", tag: "★ Know", type: "Theory" },
-            { q: "Differentiate between primary data and secondary data collection methods.", tag: "★ Know", type: "Theory" }
+            { q: "Find the Geometric Mean of 2, 4, 8, 12, 16 and 24.", tag: "★★★ Must Do", type: "Problem" },
+            { q: "Define Skewness. What are the measures of Skewness?", tag: "★★★ Must Do", type: "Theory" },
+            { q: "Define moments. Write the relation between central and non-central moments.", tag: "★★★ Must Do", type: "Theory" },
+            { q: "Define Primary data and Secondary data with examples.", tag: "★★ Important", type: "Theory" },
+            { q: "Explain Frequency Polygon and Frequency Curve.", tag: "★★ Important", type: "Theory" },
+            { q: "Find the median of: 40, 12, 35, 8, 60.", tag: "★★ Important", type: "Problem" },
+            { q: "Define Quartile Deviation and Mean Deviation.", tag: "★★ Important", type: "Theory" },
+            { q: "Define combined mean and combined standard deviation for two groups. Calculate for: n₁=50, n₂=100, x̄₁=54.1, x̄₂=50.3, σ₁=8, σ₂=7.", tag: "★★ Important", type: "Problem" },
+            { q: "What are the different types of class intervals?", tag: "★ Know", type: "Theory" },
+            { q: "Define Kurtosis. What does it measure about a distribution?", tag: "★ Know", type: "Theory" }
           ],
           longAnswer: [
-            { q: "Find the Mean, Median, and Mode for a given frequency distribution (e.g., Marks: 0–10,10–20,20–30,30–40,40–50 | Students: 12,18,27,20,17).", tag: "★★★ Must Do", type: "Problem", marks: 10 },
-            { q: "Find the Variance and Standard Deviation for a given frequency distribution (e.g., x: 1,2,3,4,5 | f: 3,9,15,10,8).", tag: "★★★ Must Do", type: "Problem", marks: 10 },
-            { q: "Find Coefficients of Skewness and Kurtosis for a given frequency distribution (e.g., x: 11,12,14,15,16 | f: 7,18,25,16,3).", tag: "★★★ Must Do", type: "Problem", marks: 10 },
-            { q: "Two batsmen (e.g., Kohli and Yadav) play 10 T20 matches. Calculate Mean, SD, and Coefficient of Variation for each. Determine who is more consistent.", tag: "★★★ Must Do", type: "Problem", marks: 5 },
-            { q: "Given Karl Pearson's coefficient of skewness = +0.32, SD = 6.5, Mean = 29.6 — find Mode and Median.", tag: "★★ Important", type: "Problem", marks: 5 },
-            { q: "Find the Mean and Mode for a given discrete frequency distribution table.", tag: "★★ Important", type: "Problem", marks: 5 },
-            { q: "Explain measures of central tendency and variability. State all formulas for Mean, Median, Mode, Variance, and SD.", tag: "★★ Important", type: "Theory", marks: 5 },
-            { q: "Explain data visualization techniques used in descriptive statistics (bar chart, histogram, frequency polygon, ogive).", tag: "★ Know", type: "Theory", marks: 5 }
+            { q: "Find the Mean, Median, and Mode from the following data:\nSize (below): 5, 10, 15, 20, 25, 30, 35\nFrequency: 1, 3, 13, 17, 27, 36, 38", tag: "★★★ Must Do", type: "Problem", marks: 5 },
+            { q: "From the prices X and Y of shares A and B, state which share is more stable in value:\nX: 55, 54, 52, 53, 56, 58, 52, 50, 51, 49\nY: 108, 107, 105, 105, 106, 107, 104, 103, 104, 101", tag: "★★★ Must Do", type: "Problem", marks: 5 },
+            { q: "Two batsmen A and B made the following scores. Whom will you select for the final? Justify using CV.\nA: 14, 13, 26, 53, 17, 29, 79, 36, 84, 49\nB: 37, 22, 56, 52, 28, 30, 37, 48, 20, 40", tag: "★★★ Must Do", type: "Problem", marks: 5 },
+            { q: "Calculate the first four moments about the mean and find β₁ and β₂:\nx: 0, 1, 2, 3, 4, 5, 6, 7, 8\nf: 1, 8, 28, 56, 70, 56, 28, 8, 1", tag: "★★★ Must Do", type: "Problem", marks: 5 },
+            { q: "Calculate Karl Pearson's coefficient of Skewness:\nSize: 1, 2, 3, 4, 5, 6, 7\nFrequency: 10, 18, 30, 25, 12, 3, 2", tag: "★★★ Must Do", type: "Problem", marks: 5 },
+            { q: "The mean weight of 150 students is 60 kg. Mean weights of boys and girls are 70 kg and 55 kg respectively, SDs are 10 and 15. Find number of boys and combined standard deviation.", tag: "★★ Important", type: "Problem", marks: 5 },
+            { q: "From the following data compute Q₁, Q₃, D₆, and P₈₀:\nAge: 20-25, 25-30, 30-35, 35-40, 40-45, 45-50, 50-55, 55-60\nNo. of Students: 60, 80, 90, 150, 180, 130, 140, 60", tag: "★★ Important", type: "Problem", marks: 5 },
+            { q: "Calculate moments about assumed mean 25 and convert to central moments. Find β₁ and β₂:\nVariable: 0-10, 10-20, 20-30, 30-40\nFrequency: 1, 3, 4, 2", tag: "★★ Important", type: "Problem", marks: 5 },
+            { q: "Analysis of monthly wages of two firms A and B:\nFirm A — Workers: 500, Avg wage: 186, Variance: 81\nFirm B — Workers: 600, Avg wage: 175, Variance: 100\n(i) Which has larger wage bill? (ii) Greater variability? (iii) Combined average and variance.", tag: "★★ Important", type: "Problem", marks: 5 },
+            { q: "Find the mean, median, and mode:\nClass: 0-9, 10-19, 20-29, 30-39, 40-49, 50-59\nFrequency: 10, 40, 80, 70, 30, 20", tag: "★★ Important", type: "Problem", marks: 5 }
           ]
         },
         {
           name: "Unit II — Probability & Random Variables",
           twoMark: [
-            { q: "Define discrete and continuous random variables with examples.", tag: "★★★ Must Do", type: "Theory" },
-            { q: "Write the mean and variance of Uniform distribution.", tag: "★★★ Must Do", type: "Theory" },
-            { q: "Show that E(K) = K where K is a constant.", tag: "★★ Important", type: "Theory+Problem" },
-            { q: "The mean and variance of a Binomial Distribution are 4 and 4/3 respectively. Find P(X ≥ 1).", tag: "★★★ Must Do", type: "Problem" },
-            { q: "Define PMF, PDF, and CDF. State the properties of each.", tag: "★★ Important", type: "Theory" },
-            { q: "State and write the Baye's Theorem formula.", tag: "★★ Important", type: "Theory" },
-            { q: "Write the mean and variance of Poisson distribution.", tag: "★★ Important", type: "Theory" },
-            { q: "Define Mathematical Expectation E(X) and write its properties.", tag: "★ Know", type: "Theory" }
+            { q: "State Baye's Theorem.", tag: "★★★ Must Do", type: "Theory" },
+            { q: "A random variable X has distribution. Find P(X < 2):\nX: 0, 1, 2, 3, 4\nP(X): 1/16, 4/16, 6/16, 4/16, 1/16", tag: "★★★ Must Do", type: "Problem" },
+            { q: "Define (i) Probability Mass Function (ii) Probability Density Function.", tag: "★★★ Must Do", type: "Theory" },
+            { q: "Define Distribution Function and mention its properties.", tag: "★★ Important", type: "Theory" },
+            { q: "Define Mathematical Expectation of a random variable and write any two properties.", tag: "★★ Important", type: "Theory" },
+            { q: "Two unbiased dice are thrown. Find the probability that both dice show the same number.", tag: "★★ Important", type: "Problem" },
+            { q: "Define (i) Axiomatic definition of probability (ii) Conditional Probability.", tag: "★★ Important", type: "Theory" },
+            { q: "Define equally likely and mutually exclusive events.", tag: "★★ Important", type: "Theory" },
+            { q: "A variate X has probability distribution. Find E(X²):\nX: −3, 6, 9\nP(X): 1/6, 1/2, 1/3", tag: "★ Know", type: "Problem" },
+            { q: "Define Variance and Covariance in terms of Expectations.", tag: "★ Know", type: "Theory" }
           ],
           longAnswer: [
-            { q: "Baye's Theorem problem: In a bolt factory, machines A, B, C manufacture 25%, 35%, 40% of total output and 5%, 4%, 2% are defective. A bolt is drawn and found defective. Find probabilities it came from A, B, and C.", tag: "★★★ Must Do", type: "Problem", marks: 5 },
-            { q: "For a continuous probability function f(x) = kxe^(−x), x ≥ 0 — find (i) k (ii) Mean (iii) Variance.", tag: "★★★ Must Do", type: "Problem", marks: 5 },
-            { q: "Using recurrence formula, find probabilities for x = 0,1,2,3,4,5 when mean of Poisson distribution is 3.", tag: "★★★ Must Do", type: "Problem", marks: 5 },
-            { q: "If X is a Poisson variate such that 3P(x=4) = ½P(x=2) + P(x=0), find (i) the mean of x (ii) P(X ≤ 2).", tag: "★★★ Must Do", type: "Problem", marks: 5 },
-            { q: "In a normal distribution, 31% of items are under 45 and 8% items are over 64. Find mean and variance.", tag: "★★★ Must Do", type: "Problem", marks: 5 },
-            { q: "If X is a normal variate with mean 30 and SD 5, find probability that (i) 26 ≤ x ≤ 40 (ii) x ≥ 45.", tag: "★★★ Must Do", type: "Problem", marks: 5 },
-            { q: "State and prove the Multiplication Theorem for two events.", tag: "★★ Important", type: "Theory", marks: 5 },
-            { q: "For a continuous random variable with PDF f(x) = ke^(−λx) for x ≥ 0, λ ≥ 0 — determine (i) k (ii) mean (iii) variance.", tag: "★★ Important", type: "Problem", marks: 5 }
+            { q: "In a bolt factory, machines A, B, C manufacture 25%, 35%, 40% of output and 5%, 4%, 2% are defective respectively. A bolt drawn at random is found defective. Find probability it was manufactured by A, B, and C.", tag: "★★★ Must Do", type: "Problem", marks: 5 },
+            { q: "A restaurant serves dishes A and B to customers: 60% men and 40% women. 80% of men order A, rest order B. 70% of women order B, rest order A. In what ratio should A and B be prepared?", tag: "★★★ Must Do", type: "Problem", marks: 5 },
+            { q: "For a continuous PDF f(x) = kxe^(−x), x ≥ 0. Find (i) k (ii) Mean (iii) Variance.", tag: "★★★ Must Do", type: "Problem", marks: 5 },
+            { q: "Given PMF: X: −3,−2,−1,0,1,2,3 and p(x): 0.05,0.10,0.30,0,0.30,0.15,0.10. Compute (i) E(X) (ii) E(2X+3) (iii) V(X) (iv) V(2X+3).", tag: "★★★ Must Do", type: "Problem", marks: 5 },
+            { q: "State and prove Baye's Theorem. Apply: Probabilities of X, Y, Z becoming managers are 4/9, 2/9, 1/3. Probability bonus scheme introduced if X, Y, Z become manager is 3/10, 1/2, 4/5. Find (i) P(bonus introduced) (ii) P(manager was X | bonus introduced).", tag: "★★★ Must Do", type: "Problem", marks: 5 },
+            { q: "A random variable X has PDF f(x) = kx(1−x²) for 0 < x < 1, 0 otherwise. Find (i) constant k (ii) P(0.5 < X < 1.5) (iii) P(X > 1).", tag: "★★ Important", type: "Problem", marks: 5 },
+            { q: "The probability of a man hitting a target is 1/3. (i) If he fires 5 times, find P(hitting at least twice). (ii) How many times must he fire so that P(hitting at least once) > 90%?", tag: "★★ Important", type: "Problem", marks: 5 },
+            { q: "Two dice are rolled. Let X = total points on upturned faces. Construct PMF table and draw probability chart. Also find distribution function F(X).", tag: "★★ Important", type: "Problem", marks: 5 },
+            { q: "A die is tossed twice. Getting a number > 4 is a success. Find mean and variance of the probability distribution of successes.", tag: "★★ Important", type: "Problem", marks: 5 },
+            { q: "In a continuous distribution, relative frequency density is f(x) = y₀·x(2−x), 0 < x < 2. Find mean, variance, β₁ and β₂. Show the distribution is symmetrical.", tag: "★ Know", type: "Problem", marks: 5 }
           ]
         },
         {
           name: "Unit III — Correlation & Curve Fitting",
           twoMark: [
-            { q: "Define rank correlation coefficient (Spearman's). When is it used?", tag: "★★★ Must Do", type: "Theory" },
-            { q: "Write the normal equations to fit a curve y = ae^(bx).", tag: "★★★ Must Do", type: "Theory" },
-            { q: "From regression equations Y = 0.516X + 33.73 and X = 0.512Y + 32.52, find correlation coefficient ρ.", tag: "★★★ Must Do", type: "Problem" },
-            { q: "What is the method of least squares? State its principle.", tag: "★★ Important", type: "Theory" },
-            { q: "Define regression. Differentiate between regression of Y on X and X on Y.", tag: "★★ Important", type: "Theory" },
-            { q: "What is the difference between correlation and regression?", tag: "★★ Important", type: "Theory" },
-            { q: "Write the normal equations to fit a straight line y = a + bx.", tag: "★ Know", type: "Theory" },
-            { q: "What are the properties of correlation coefficient r? What does r = 0 indicate?", tag: "★ Know", type: "Theory" }
+            { q: "Write the normal equations for curve Y = ae^(bx).", tag: "★★★ Must Do", type: "Theory" },
+            { q: "Write the normal equations for straight line Y = a + bX for data: X: 2,4,6,8 and Y: 1,3,5,7.", tag: "★★★ Must Do", type: "Problem" },
+            { q: "Distinguish between regression and multiple regression.", tag: "★★★ Must Do", type: "Theory" },
+            { q: "Write the normal equations for multiple regression equation Y on X₁ and X₂.", tag: "★★ Important", type: "Theory" },
+            { q: "What are regression coefficients? Write the angle between two regression lines.", tag: "★★ Important", type: "Theory" },
+            { q: "Define Rank Correlation under repeated ranks.", tag: "★★ Important", type: "Theory" },
+            { q: "Find constants a and b for Y = a + bX given: Σx=14, Σy=36, Σx²=78, Σxy=210, n=4.", tag: "★★ Important", type: "Problem" },
+            { q: "Two regression equations: x = 19.13 − 0.87y and y = 11.64 − 0.5x. Compute mean values of x and y.", tag: "★★ Important", type: "Theory" },
+            { q: "Calculate Correlation Coefficient and SD of y: b_yx=0.88, b_xy=0.86, SD of x=2.", tag: "★ Know", type: "Problem" },
+            { q: "What is regression? Why are there two regression lines?", tag: "★ Know", type: "Theory" }
           ],
           longAnswer: [
-            { q: "Find the correlation coefficient and regression lines for given x and y values (e.g., x: 1,2,3,4,5,6 | y: 2,5,3,8,7,5). Also find x̄ and ȳ.", tag: "★★★ Must Do", type: "Problem", marks: 10 },
-            { q: "In a partially destroyed laboratory record, lines of regression are 4x − 5y + 33 = 0 and 20x − 9y = 107. Calculate x̄, ȳ, and coefficient of correlation between x and y.", tag: "★★★ Must Do", type: "Problem", marks: 5 },
-            { q: "Fit a second-degree parabola y = a + bx + cx² to given data (e.g., x: 2,4,6,8,10 | y: 6.07,12.85,31.47,57.38,91.29).", tag: "★★★ Must Do", type: "Problem", marks: 5 },
-            { q: "Fit a curve of the form y = ae^(bx) to given data (e.g., x: 0,1,2,3 | y: 1.05,2.10,3.85,8.30).", tag: "★★★ Must Do", type: "Problem", marks: 5 },
-            { q: "Obtain the value of correlation coefficient between X and Y for given tabular data (e.g., X: 65,66,67,67,68,69,70,72 | Y: 67,68,65,68,72,72,69,71).", tag: "★★★ Must Do", type: "Problem", marks: 5 },
-            { q: "Fit a parabola to given data by method of least squares (e.g., x: 0,5,10,15,20,25 | y: 10,15,17,22,24,30).", tag: "★★ Important", type: "Problem", marks: 10 },
-            { q: "From two regression equations calculate x̄, ȳ, byx, bxy, and hence r. Interpret the relationship.", tag: "★★ Important", type: "Problem", marks: 5 },
-            { q: "Explain the method of least squares. What is the principle of curve fitting? Write normal equations for y = a + bx + cx².", tag: "★ Know", type: "Theory", marks: 5 }
+            { q: "Fit a curve of the form y = ab^x to the following data:\nx: 1, 2, 3, 4, 5, 6, 7, 8\ny: 1.0, 1.2, 1.8, 2.5, 3.6, 4.7, 6.6, 9.1", tag: "★★★ Must Do", type: "Problem", marks: 5 },
+            { q: "Fit a parabola y = a + bx + cx² to the following data:\nX: 0, 1, 2, 3, 4, 5\nY: 1, 3, 7, 13, 21, 31", tag: "★★★ Must Do", type: "Problem", marks: 5 },
+            { q: "Regression equations: 3x + 2y − 26 = 0 and 6x + y − 31 = 0. Find (i) Mean values of x and y (ii) Regression coefficients b_xy and b_yx (iii) Coefficient of correlation (iv) Most probable value of y when x = 5.", tag: "★★★ Must Do", type: "Problem", marks: 5 },
+            { q: "Ten competitors in a beauty contest ranked by three judges:\nJudge 1: 1,6,5,10,3,2,4,9,7,8\nJudge 2: 3,5,8,4,7,10,2,1,6,9\nJudge 3: 6,4,9,8,1,2,3,10,5,7\nFind which pair of judges has common taste in beauty.", tag: "★★★ Must Do", type: "Problem", marks: 5 },
+            { q: "Find Y when X₁=10 and X₂=6 from the least squares regression equation of Y on X₁ and X₂:\nY: 90,72,54,42,30,12\nX₁: 3,5,6,8,12,14\nX₂: 16,10,7,4,3,2", tag: "★★★ Must Do", type: "Problem", marks: 5 },
+            { q: "Fit an exponential curve y = ae^(bx) to the data:\nX: 2, 4, 6, 8\nY: 25, 38, 56, 84", tag: "★★ Important", type: "Problem", marks: 5 },
+            { q: "Two regression lines of bivariate population: 8x − 10y + 66 = 0 and 40x − 18y = 214. Variance of x = 9. Find (i) Mean values (ii) Correlation between x and y (iii) SD of y.", tag: "★★ Important", type: "Problem", marks: 5 },
+            { q: "Obtain correlation coefficient between X and Y:\nX: 68,64,75,50,64,80,75,40,55,64\nY: 62,58,68,45,81,60,68,48,50,70", tag: "★★ Important", type: "Problem", marks: 5 },
+            { q: "Fit a curve y = ax^b to the data and estimate y when x = 6:\nX: 1, 2, 3, 4, 5\nY: 0.5, 2, 4.5, 8, 12.5", tag: "★★ Important", type: "Problem", marks: 5 },
+            { q: "From the following data obtain two regression lines:\nSales: 100,98,78,85,110,93,80\nPurchase: 85,90,70,72,95,81,74", tag: "★ Know", type: "Problem", marks: 5 }
           ]
         },
         {
           name: "Unit IV — Sampling Distributions",
           twoMark: [
-            { q: "Define point estimation and interval estimation with examples.", tag: "★★★ Must Do", type: "Theory" },
-            { q: "A sample of size 900 is taken from a population whose standard deviation is 15. Find the standard error of mean.", tag: "★★★ Must Do", type: "Problem" },
-            { q: "Define standard error of mean and state its formula.", tag: "★★ Important", type: "Theory" },
-            { q: "Define maximum error of estimates for small samples.", tag: "★★ Important", type: "Theory" },
-            { q: "What is a sampling distribution? What is the central limit theorem?", tag: "★★ Important", type: "Theory" },
-            { q: "A normal population has SD = 1. A sample of size 400 is collected. Find standard error of sampling distribution of means.", tag: "★★ Important", type: "Problem" },
-            { q: "What is the difference between a parameter and a statistic?", tag: "★ Know", type: "Theory" },
-            { q: "Define degrees of freedom. What is a t-distribution?", tag: "★ Know", type: "Theory" }
+            { q: "Define standard error and mention its importance.", tag: "★★★ Must Do", type: "Theory" },
+            { q: "In a sample of size n=144, SD=4, Mean=150. Find the 95% confidence interval.", tag: "★★★ Must Do", type: "Problem" },
+            { q: "State the Central Limit Theorem.", tag: "★★★ Must Do", type: "Theory" },
+            { q: "What is the maximum error of estimation?", tag: "★★ Important", type: "Theory" },
+            { q: "Define t-distribution. What are its applications?", tag: "★★ Important", type: "Theory" },
+            { q: "Define F-distribution. What are its characteristics?", tag: "★★ Important", type: "Theory" },
+            { q: "What is the critical region and acceptance region in hypothesis testing?", tag: "★★ Important", type: "Theory" },
+            { q: "What are the criteria of good estimation?", tag: "★★ Important", type: "Theory" },
+            { q: "Given: Sampling error E=10, SD=48, Zα/2=1.645. Find sample size n.", tag: "★ Know", type: "Problem" },
+            { q: "If n=81, SD=4.5, Mean=32. Find 99% confidence interval for mean.", tag: "★ Know", type: "Problem" }
           ],
           longAnswer: [
-            { q: "Population: {4, 8, 12, 16, 20, 24}. Draw all samples of size 2 WITH replacement. Find (a) population mean (b) population SD (c) mean of sampling distribution (d) SD of sampling distribution of means.", tag: "★★★ Must Do", type: "Problem", marks: 10 },
-            { q: "Population: {3, 6, 9, 15, 27}. List all possible samples of size 3 WITHOUT replacement from finite population. Calculate mean of each sample, mean of sampling distribution, and SD of sampling distribution of means.", tag: "★★★ Must Do", type: "Problem", marks: 10 },
-            { q: "Mean and SD of a population are 11,795 and 14,054. If n = 50, find 95% confidence interval for the true mean.", tag: "★★★ Must Do", type: "Problem", marks: 5 },
-            { q: "When a sample is taken from infinite population, what happens to the standard error if size decreases from 800 to 700?", tag: "★★ Important", type: "Problem", marks: 5 },
-            { q: "Determine a 95% confidence interval for the variance of a normal population with sample: 145.3, 145.1, 145.4, 146.2.", tag: "★★ Important", type: "Problem", marks: 5 },
-            { q: "Mean and SD of population are 11795 and 14054. What can one assert with 95% confidence about maximum error if X̄ = 11795 and n = 50? Also construct 95% CI.", tag: "★★ Important", type: "Problem", marks: 5 },
-            { q: "Explain the concept of sampling distribution. State and explain the Central Limit Theorem.", tag: "★★ Important", type: "Theory", marks: 5 },
-            { q: "Differentiate between large sample tests and small sample tests. When do we use t-distribution?", tag: "★ Know", type: "Theory", marks: 5 }
+            { q: "A population consists of five numbers 2, 3, 6, 8 and 11. All possible samples of size 2 drawn WITH replacement. Find (a) Population mean (b) Population SD (c) Mean of sampling distribution of means (d) SD of sampling distribution of means.", tag: "★★★ Must Do", type: "Problem", marks: 5 },
+            { q: "A population consists of six numbers 4, 8, 12, 16, 20, 24. All possible samples of size 2 drawn WITHOUT replacement. Find (a) Population mean (b) Population SD (c) Mean of sampling distribution (d) SD of sampling distribution of means.", tag: "★★★ Must Do", type: "Problem", marks: 10 },
+            { q: "In two large populations, there are 30% and 25% respectively of blue-eyed people. Is this difference likely to be hidden in samples of 1200 and 900 respectively from the two populations?", tag: "★★★ Must Do", type: "Problem", marks: 5 },
+            { q: "In a big city, 325 men out of 600 men were found to be smokers. Does this support the conclusion that majority of men are smokers? Find 95% confidence interval for proportion of smokers.", tag: "★★★ Must Do", type: "Problem", marks: 5 },
+            { q: "The mean breaking strength of copper wire is 575 lbs with SD = 8.3 lbs. How large a sample must be used so that there is one chance in 100 that mean breaking strength of sample is less than 572 lbs?", tag: "★★★ Must Do", type: "Problem", marks: 5 },
+            { q: "A random sample of 500 pineapples from a large consignment showed 65 were bad. Show SE of proportion = 0.015 and deduce that percentage of bad pineapples lies between 8.5 and 17.5.", tag: "★★ Important", type: "Problem", marks: 5 },
+            { q: "A population consists of four numbers 2, 3, 4, 5. All possible samples of size 2 drawn WITH replacement. Find (a) Population mean (b) Population SD (c) Mean of sampling distribution (d) SD of sampling distribution.", tag: "★★ Important", type: "Problem", marks: 5 },
+            { q: "A random sample of 100 teachers revealed mean weekly salary Rs.487 with SD Rs.48. With what degree of confidence can we assert that average weekly salary is between Rs.472 and Rs.502?", tag: "★★ Important", type: "Problem", marks: 5 },
+            { q: "A random sample of 700 units showed 200 were damaged. Find 95% and 99% confidence limits for proportion of damaged units in consignment.", tag: "★★ Important", type: "Problem", marks: 5 },
+            { q: "Determine mean and SD of sampling distribution of means of 300 random samples each of size n=36 from population N=1500, mean=22.4, SD=0.048. If sampling is (a) with replacement (b) without replacement.", tag: "★ Know", type: "Problem", marks: 5 }
           ]
         },
         {
           name: "Unit V — Testing of Hypothesis",
           twoMark: [
-            { q: "Define Type-I and Type-II errors in hypothesis testing.", tag: "★★★ Must Do", type: "Theory" },
-            { q: "Find the values of (i) t₀.₀₅ with d.f. 12 (ii) χ²₀.₀₀₁ with d.f. 16.", tag: "★★★ Must Do", type: "Theory+Problem" },
-            { q: "Explain test of significance for single mean.", tag: "★★ Important", type: "Theory" },
-            { q: "Explain chi-square test for goodness of fit and state its conditions.", tag: "★★ Important", type: "Theory" },
-            { q: "What is a null hypothesis? What is an alternative hypothesis?", tag: "★★ Important", type: "Theory" },
-            { q: "Define critical region and level of significance α.", tag: "★★ Important", type: "Theory" },
-            { q: "What is the F-test? When is it used?", tag: "★ Know", type: "Theory" },
-            { q: "State the conditions for applying the chi-square test.", tag: "★ Know", type: "Theory" }
+            { q: "Write the step-by-step procedure of testing a hypothesis.", tag: "★★★ Must Do", type: "Theory" },
+            { q: "Define chi-square distribution and write its applications.", tag: "★★★ Must Do", type: "Theory" },
+            { q: "Explain Type I and Type II errors in sampling.", tag: "★★ Important", type: "Theory" },
+            { q: "Write the test statistic for difference of means and difference of variances.", tag: "★★ Important", type: "Theory" },
+            { q: "What is the 95% confidence interval for population mean when sample size is 16?", tag: "★★ Important", type: "Theory" },
+            { q: "Explain interval estimation. How is it different from point estimation?", tag: "★★ Important", type: "Theory" },
+            { q: "Define Population and Sample with examples.", tag: "★★ Important", type: "Theory" },
+            { q: "Define Sampling Distribution.", tag: "★★ Important", type: "Theory" },
+            { q: "What are the different types of sampling?", tag: "★ Know", type: "Theory" },
+            { q: "A sample of size 64 is taken from a population with SD=2, probability 0.99. Find maximum error.", tag: "★ Know", type: "Problem" }
           ],
           longAnswer: [
-            { q: "A die was thrown 9000 times and yielded 3 or 4 in 3240 times. Is this consistent with the hypothesis that the die is unbiased?", tag: "★★★ Must Do", type: "Problem", marks: 5 },
-            { q: "Two pumpkin samples (n₁=11, n₂=9) show sample SDs of 0.8 and 0.5 for weights. Assuming normal distributions, test the hypothesis that true variances are equal.", tag: "★★★ Must Do", type: "Problem", marks: 5 },
-            { q: "In a random sample of 60 workers, average commute = 33.8 min, SD = 6.1 min. Can we reject H₀: μ = 32.6 in favour of H₁: μ > 32.6 at α = 0.05?", tag: "★★★ Must Do", type: "Problem", marks: 5 },
-            { q: "Nicotine content in mg in two tobacco samples: Sample A (24,27,26,21,25) and Sample B (27,30,28,31,22,36). Can it be said that samples come from the same normal population?", tag: "★★★ Must Do", type: "Problem", marks: 10 },
-            { q: "Four coins are tossed 160 times. Observed distribution: x=0→8, x=1→34, x=2→69, x=3→43, x=4→6. Find expected frequencies and test goodness of fit at 5% level.", tag: "★★★ Must Do", type: "Problem", marks: 10 },
-            { q: "Explain (i) Null hypothesis (ii) Critical region (iii) Types of error in hypothesis testing.", tag: "★★ Important", type: "Theory", marks: 5 },
-            { q: "Explain the chi-square test for goodness of fit. What are its assumptions? When is it applicable?", tag: "★★ Important", type: "Theory", marks: 5 },
-            { q: "Define Type-I and Type-II errors. Explain the trade-off between them with an example.", tag: "★ Know", type: "Theory", marks: 5 }
+            { q: "A random sample of 10 boys had IQs: 70, 120, 110, 101, 88, 83, 95, 98, 107, 100. Do these data support the assumption of population mean IQ = 100? Find a reasonable range for mean IQ values of samples of 10 boys.", tag: "★★★ Must Do", type: "Problem", marks: 5 },
+            { q: "A stimulus administered to 12 patients resulted in increase of blood pressure: 5, 2, 8, −1, 3, 0, −2, 1, 5, 0, 4, 6. Can it be concluded that the stimulus will in general be accompanied by an increase in blood pressure?", tag: "★★★ Must Do", type: "Problem", marks: 5 },
+            { q: "Time taken by workers performing a job:\nMethod I: 20, 16, 26, 27, 23, 22\nMethod II: 27, 33, 42, 35, 32, 34, 38\nDo the data show that variances of time distribution do not differ significantly?", tag: "★★★ Must Do", type: "Problem", marks: 5 },
+            { q: "Fit a binomial distribution and test for goodness of fit:\nX: 0, 1, 2, 3, 4\nf(x): 17, 52, 54, 31, 6", tag: "★★★ Must Do", type: "Problem", marks: 5 },
+            { q: "An IQ test administered to 5 persons before and after training:\nBefore: 110, 120, 123, 132, 125\nAfter: 120, 118, 125, 136, 121\nTest whether there is any change in IQ after the training programme. (Paired t-test)", tag: "★★★ Must Do", type: "Problem", marks: 5 },
+            { q: "Samples of two types of electric bulbs tested for length of life:\nType I — Size: 8, Mean: 1234, SD: 36\nType II — Size: 7, Mean: 1036, SD: 40\nIs the difference in means sufficient to warrant that Type I is superior to Type II?", tag: "★★ Important", type: "Problem", marks: 5 },
+            { q: "Gains in weight (kg) of pigs fed on two diets:\nDiet A: 25,32,30,34,24,14,32,24,30,31,35,25\nDiet B: 44,34,22,10,47,31,40,30,32,35,18,21,35,29,22\nTest if two diets differ significantly.", tag: "★★ Important", type: "Problem", marks: 5 },
+            { q: "In one sample of 8 observations, sum of squares of deviations = 84.4. In another sample of 10 observations it was 102.6. Test whether this difference is significant at 5% level. (F critical for n₁=7, n₂=9 is 3.29)", tag: "★★ Important", type: "Problem", marks: 5 },
+            { q: "Mean weekly sale of soap bars was 146.3 per store. After advertising campaign, mean weekly sales in 22 stores = 153.7 with SD = 17.2. Was the advertising campaign successful?", tag: "★★ Important", type: "Problem", marks: 5 },
+            { q: "Out of 8000 graduates, 800 are female. Out of 1600 graduate employees, 120 are female. Use chi-square to determine if any distinction is made in appointment based on gender. (χ² at 5% level, df=1 is 3.84)", tag: "★ Know", type: "Problem", marks: 5 }
           ]
         }
       ]
@@ -980,7 +1000,7 @@ function App() {
     const { done, total } = getSubjectDoneCount(subject, doneQuestions);
     const pct = total > 0 ? Math.round((done / total) * 100) : 0;
     const isDark = theme === 'focus';
-    
+
     const getSubjectColors = (subjectId) => {
       switch (subjectId) {
         case 'ps': return { bg: '#EEF2FF', text: '#3730A3' };
@@ -991,7 +1011,7 @@ function App() {
         default: return { bg: '#ffffff', text: '#333333' };
       }
     };
-    
+
     const { bg: cardBg, text: cardText } = getSubjectColors(subject.id);
 
     return (
@@ -1081,7 +1101,7 @@ function App() {
     return (
       <div className="landing-container">
         {renderCSS()}
-        
+
         <div className="bg-slideshow">
           {frames.map((src, i) => (
             <div key={i} className="bg-slide" style={{ backgroundImage: `url(${src})` }} />
