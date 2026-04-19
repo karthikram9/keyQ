@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { ArrowLeft, ChevronDown, Check, Moon, Sun, X } from 'lucide-react';
+import { ArrowLeft, ChevronDown, Check, Moon, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 import frame1 from './assets/frame1.png';
@@ -311,12 +311,12 @@ function App() {
           longAnswer: [
             { q: "Construct an AVL tree by inserting elements in order: 14,17,11,7,53,4,13,12,8,60,19,16,20. Show all rotations.", tag: "★★★ Must Do", type: "Problem", marks: 5 },
             { q: "What is an AVL tree? Explain all four types of rotations (LL, RR, LR, RL) with an example for each case.", tag: "★★★ Must Do", type: "Theory", marks: 10 },
-            { q: "Create a Red-Black tree by inserting the following sequence: 8, 18, 5, 15, 17, 25, 40, 80. Explain all rules applied.", tag: "★★★ Must Do", type: "Problem", marks: 5 },
+            { q: "Create a Red-Black tree by inserting the following sequence: 8, 18, 5, 15, 17, 25, 40, 80. Explain all rules applied.", tag: "★★ Important", type: "Problem", marks: 5 },
             { q: "Demonstrate the process of deleting a node from a Red-Black Tree with an example. Show all cases.", tag: "★★ Important", type: "Problem", marks: 5 },
             { q: "Describe how graphs can be represented using (i) Adjacency Matrix (ii) Adjacency List. Compare both approaches.", tag: "★★ Important", type: "Theory", marks: 5 },
-            { q: "Write an algorithm to construct a Min Heap Priority Queue and explain with an example.", tag: "★★ Important", type: "Algorithm", marks: 7 },
-            { q: "Construct a B-Tree of order 3 for the set: {10, 20, 30, 60, 40, 50}. Show all insertions.", tag: "★★ Important", type: "Problem", marks: 3 },
-            { q: "Define Balanced Tree. What is an Euler Circuit? Differentiate between Euler path and Euler circuit.", tag: "★ Know", type: "Theory", marks: 5 }
+            { q: "Write an algorithm to construct a Min Heap Priority Queue and explain with an example.", tag: "★★★ Must Do", type: "Algorithm", marks: 7 },
+            { q: "Construct a B-Tree of order 3 for the set: {10, 20, 30, 60, 40, 50}. Show all insertions.", tag: "★★★ Must Do", type: "Problem", marks: 3 },
+            { q: "Explain BFS and DFS traversal of a graph with algorithm and example. Find time complexity of each.", tag: "★★★ Must Do", type: "Algorithm", marks: 5 }
           ]
         },
         {
@@ -329,7 +329,7 @@ function App() {
             { q: "What is the general method of Divide and Conquer? State its steps.", tag: "★★ Important", type: "Theory" },
             { q: "Write the recurrence relation for Merge Sort. Solve it to get time complexity.", tag: "★★ Important", type: "Theory+Problem" },
             { q: "Define best-case, worst-case, and average-case complexity with examples.", tag: "★ Know", type: "Theory" },
-            { q: "What is algorithm analysis? Why is asymptotic analysis preferred?", tag: "★ Know", type: "Theory" }
+            { q: "Define Biconnected Component and Connected Component of a graph.", tag: "★★ Important", type: "Theory" }
           ],
           longAnswer: [
             { q: "Write the Divide and Conquer recursive Merge Sort algorithm. Derive its time complexity using recurrence relation T(n) = 2T(n/2) + n.", tag: "★★★ Must Do", type: "Algorithm", marks: 5 },
@@ -338,8 +338,8 @@ function App() {
             { q: "Write an algorithm for DFS traversal of a graph and find its time complexity.", tag: "★★ Important", type: "Algorithm", marks: 5 },
             { q: "Write the General Method of Divide and Conquer. Explain with the control abstraction. State its applications.", tag: "★★ Important", type: "Theory", marks: 5 },
             { q: "Explain the significance of the Convex Hull problem. How is Divide and Conquer applied to solve it?", tag: "★★ Important", type: "Theory", marks: 5 },
-            { q: "Explain Convex Hull problem using Divide and Conquer method.", tag: "★★ Important", type: "Theory", marks: 5 },
-            { q: "Explain the characteristics of an algorithm. What makes a good algorithm? Compare iterative and recursive approaches.", tag: "★ Know", type: "Theory", marks: 5 }
+            { q: "Write an algorithm for BFS traversal. Explain Connected and Biconnected Components with examples.", tag: "★★ Important", type: "Algorithm", marks: 5 },
+            { q: "Explain Strassen's Matrix Multiplication using Divide and Conquer. Derive its time complexity and compare with the standard method.", tag: "★★ Important", type: "Theory", marks: 5 }
           ]
         },
         {
@@ -352,7 +352,7 @@ function App() {
             { q: "What is Dynamic Programming? How does it differ from Greedy?", tag: "★★ Important", type: "Theory" },
             { q: "Define Sum of Subsets problem.", tag: "★★ Important", type: "Theory" },
             { q: "What is backtracking? Give one example of a problem solved by backtracking.", tag: "★★ Important", type: "Theory" },
-            { q: "Define a feasibility function in the context of greedy algorithms.", tag: "★ Know", type: "Theory" }
+            { q: "What is Graph Coloring? Define chromatic number.", tag: "★★ Important", type: "Theory" }
           ],
           longAnswer: [
             { q: "Use greedy algorithm for Job Sequencing with Deadlines: n=7, profits=(3,5,20,18,1,6,30), deadlines=(1,3,4,3,2,1,2). Find optimal solution and total profit.", tag: "★★★ Must Do", type: "Problem", marks: 5 },
@@ -362,7 +362,7 @@ function App() {
             { q: "Write Prim's algorithm to find Minimum Cost Spanning Tree using Greedy method. Find time complexity.", tag: "★★ Important", type: "Algorithm", marks: 5 },
             { q: "Explain the Graph Coloring problem. Draw state space tree for m=3 colours, n=4 vertices. Discuss time and space complexity.", tag: "★★ Important", type: "Theory+Problem", marks: 5 },
             { q: "Solve the String Editing problem to transform X = \"abcd\" into Y = \"bca\" using Dynamic Programming. Find minimum cost edit sequence.", tag: "★★★ Must Do", type: "Problem", marks: 10 },
-            { q: "Write the Control Abstraction of iterative Backtracking. Explain the backtracking solution for Sum of Subsets problem.", tag: "★★ Important", type: "Theory", marks: 5 }
+            { q: "Write Kruskal's algorithm for Minimum Cost Spanning Tree. Compare with Prim's algorithm.", tag: "★★ Important", type: "Algorithm", marks: 5 }
           ]
         },
         {
@@ -370,7 +370,7 @@ function App() {
           twoMark: [
             { q: "List the features of Dynamic Programming.", tag: "★★★ Must Do", type: "Theory" },
             { q: "Write the formula to solve the Travelling Salesperson Problem with Dynamic Programming.", tag: "★★★ Must Do", type: "Theory" },
-            { q: "What is the String Editing Problem?", tag: "★★ Important", type: "Theory" },
+            { q: "How is Branch and Bound different from Backtracking?", tag: "★★★ Must Do", type: "Theory" },
             { q: "Define P and NP classes.", tag: "★★ Important", type: "Theory" },
             { q: "Explain Least Cost Search (LC Search) in Branch and Bound.", tag: "★★ Important", type: "Theory" },
             { q: "What is the 0/1 Knapsack Problem? How is it different from Fractional Knapsack?", tag: "★★ Important", type: "Theory" },
@@ -384,7 +384,7 @@ function App() {
             { q: "Write the Backtracking algorithm to solve N-Queens problem. Draw the portion of the state space tree for 4-Queens.", tag: "★★★ Must Do", type: "Algorithm+Problem", marks: 10 },
             { q: "Explain how Branch and Bound technique is used to solve the Travelling Salesperson Problem with an example.", tag: "★★★ Must Do", type: "Theory", marks: 10 },
             { q: "Explain the methodology of Dynamic Programming. List the applications. How does it differ from Divide and Conquer?", tag: "★★ Important", type: "Theory", marks: 5 },
-            { q: "List features of Dynamic Programming. When is DP preferred over Greedy? Give examples.", tag: "★★ Important", type: "Theory", marks: 5 },
+            { q: "Solve All-Pairs Shortest Path problem using Floyd-Warshall algorithm with an example matrix.", tag: "★★ Important", type: "Problem", marks: 5 },
             { q: "How is Branch and Bound different from Backtracking? Explain the general method of Branch and Bound.", tag: "★★ Important", type: "Theory", marks: 5 }
           ]
         },
@@ -397,8 +397,8 @@ function App() {
             { q: "What is Cook's Theorem? State it.", tag: "★★★ Must Do", type: "Theory" },
             { q: "What is the Clique Decision Problem?", tag: "★★ Important", type: "Theory" },
             { q: "What is the Travelling Salesperson Decision Problem?", tag: "★★ Important", type: "Theory" },
-            { q: "Define the Satisfiability Problem (SAT). Why is it important in NP-completeness?", tag: "★ Know", type: "Theory" },
-            { q: "What is the concept of polynomial-time reduction?", tag: "★ Know", type: "Theory" }
+            { q: "What is Scheduling Identical Processors? Is it NP-Hard?", tag: "★★ Important", type: "Theory" },
+            { q: "Define Chromatic Number Decision Problem (CNDP).", tag: "★★ Important", type: "Theory" }
           ],
           longAnswer: [
             { q: "Explain Travelling Salesperson Problem using LCBB procedure. Given the cost matrix, draw state space tree and find optimal tour. (Use matrix: ∞,20,30,10,11 / 15,∞,16,4,2 / 3,5,∞,2,4 / 19,6,18,∞,3 / 16,4,7,16,∞)", tag: "★★★ Must Do", type: "Problem", marks: 5 },
@@ -408,7 +408,7 @@ function App() {
             { q: "What is the difference between NP-Hard and NP-Complete problems? Provide examples. Why can't we prove NP ≠ P?", tag: "★★★ Must Do", type: "Theory", marks: 5 },
             { q: "What is the Clique Decision Problem (CDP), and why is it considered NP-Hard?", tag: "★★ Important", type: "Theory", marks: 5 },
             { q: "Give an example of a problem that is NP-Hard but NOT NP-Complete. Justify your answer.", tag: "★★ Important", type: "Theory", marks: 5 },
-            { q: "Explain Branch and Bound General Method. How is Least Cost Search used in Branch and Bound?", tag: "★ Know", type: "Theory", marks: 5 }
+            { q: "Explain Job Shop Scheduling problem. Why is it NP-Hard?", tag: "★★ Important", type: "Theory", marks: 5 }
           ]
         }
       ]
@@ -679,7 +679,7 @@ function App() {
     }
   });
   const [activeSection, setActiveSection] = useState('2m');
-  const [theme, setTheme] = useState('light');
+
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
@@ -697,16 +697,32 @@ function App() {
     }
   }
 
+  // Scroll animations Intersection Observer
   useEffect(() => {
-    document.body.className = theme === 'focus' ? 'theme-focus' : 'theme-light';
-  }, [theme]);
+    const observer = new IntersectionObserver((entries) => {
+      let delay = 0;
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          setTimeout(() => {
+            entry.target.classList.add('is-visible');
+          }, delay);
+          delay += 75; // stagger slightly
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { rootMargin: "0px 0px -20px 0px", threshold: 0.05 });
+
+    const elements = document.querySelectorAll('.reveal');
+    elements.forEach(el => observer.observe(el));
+    return () => observer.disconnect();
+  }, [view, selectedSubject, selectedUnit, activeFilter, activeSection, isLoading]);
 
   // Handle fake loading for shimmer
   useEffect(() => {
     setIsLoading(true);
     const t = setTimeout(() => setIsLoading(false), 400); // 400ms shimmer
     return () => clearTimeout(t);
-  }, [view, selectedSubject, selectedUnit, activeSection, theme]);
+  }, [view, selectedSubject, selectedUnit, activeSection]);
 
   const toggleDone = (subjectId, unitIdx, section, qIdx) => {
     const key = `${subjectId}-${unitIdx}-${section}-${qIdx}`;
@@ -766,30 +782,27 @@ function App() {
   const renderCSS = () => (
     <style dangerouslySetInnerHTML={{
       __html: `
-    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;500;600;700&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@400;500;600;700&display=swap');
     
     html { 
       scroll-behavior: smooth; 
       scrollbar-width: thin;
-      scrollbar-color: var(--card-border) transparent;
+      scrollbar-color: rgba(255,255,255,0.1) transparent;
     }
 
     :root {
-      --bg-color: #f9f9f7;
-      --text-main: #1a1a2e;
-      --text-muted: #888;
-      --card-bg: rgba(255, 255, 255, 0.95);
-      --card-border: #eee;
-      --glass-bg: rgba(255, 255, 255, 0.85);
-    }
+      --bg-color: #1a1615;
+      --text-main: rgba(255, 255, 255, 0.95);
+      --text-secondary: rgba(255, 245, 235, 0.65);
+      --text-muted: rgba(255, 245, 235, 0.4);
+      
+      --surface: rgba(40, 30, 25, 0.2);
+      --glass-bg: linear-gradient(135deg, rgba(80, 60, 50, 0.15), rgba(20, 15, 10, 0.3));
+      --card-border: rgba(255, 255, 255, 0.12);
 
-    body.theme-focus {
-      --bg-color: #0f172a;
-      --text-main: #f8fafc;
-      --text-muted: #94a3b8;
-      --card-bg: rgba(30, 41, 59, 0.95);
-      --card-border: #334155;
-      --glass-bg: rgba(15, 23, 42, 0.9);
+      --accent-cyan: rgba(255, 160, 60, 0.9);
+      --accent-violet: rgba(255, 100, 50, 0.8);
+      --accent-green: rgba(180, 230, 100, 0.8);
     }
 
     body {
@@ -798,58 +811,137 @@ function App() {
       background-color: var(--bg-color);
       color: var(--text-main);
       -webkit-font-smoothing: antialiased;
-      transition: background-color 0.4s ease, color 0.4s ease;
+      background-image: url("https://images.unsplash.com/photo-1509316785289-025f5b846b35?q=80&w=2525&auto=format&fit=crop");
+      background-size: cover;
+      background-position: center bottom;
+      background-attachment: fixed;
+    }
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background: linear-gradient(to top, rgba(15, 10, 5, 0.95) 0%, rgba(25, 15, 10, 0.6) 40%, rgba(25, 15, 10, 0.2) 100%);
+      z-index: -1;
     }
     * { box-sizing: border-box; }
     
     h1, h2, h3, .playfair { font-family: 'Playfair Display', serif; }
 
+    /* Scroll Animation */
+    .reveal {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.8s cubic-bezier(0.22, 1, 0.36, 1), transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    .reveal.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
     .landing-btn {
-      background: var(--text-main); color: var(--bg-color); padding: 14px 36px; border-radius: 50px;
-      font-size: 15px; font-family: 'Inter', sans-serif; border: none; cursor: pointer;
-      margin-top: 40px; transition: all 0.2s ease; box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+      background: var(--glass-bg); 
+      color: var(--text-main); 
+      padding: 16px 40px; 
+      border-radius: 50px;
+      font-size: 16px; 
+      font-weight: 500;
+      font-family: 'Inter', sans-serif; 
+      border: 1px solid var(--card-border); 
+      cursor: pointer;
+      backdrop-filter: blur(32px) saturate(120%);
+      -webkit-backdrop-filter: blur(32px) saturate(120%);
+      margin-top: 40px; 
+      transition: all 0.4s cubic-bezier(0.22, 1, 0.36, 1); 
+      box-shadow: inset 0 1px 2px rgba(255,255,255,0.1), inset 0 -1px 2px rgba(0,0,0,0.2), 0 8px 32px rgba(0,0,0,0.6);
     }
     .landing-btn:hover {
-      transform: translateY(-3px); box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+      transform: translateY(-4px) scale(1.02); 
+      box-shadow: inset 0 1px 2px rgba(255,255,255,0.2), inset 0 -1px 2px rgba(0,0,0,0.4), 0 16px 48px rgba(0,0,0,0.8);
+      background: linear-gradient(135deg, rgba(80, 60, 50, 0.25), rgba(20, 15, 10, 0.5));
+      border: 1px solid rgba(255, 255, 255, 0.2);
     }
 
     .subject-card {
-      background: var(--card-bg); border-radius: 16px; padding: 28px 24px; border: 1px solid var(--card-border);
-      cursor: pointer; transition: all 0.25s ease; box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+      background: var(--glass-bg);
+      backdrop-filter: blur(28px) saturate(110%);
+      -webkit-backdrop-filter: blur(28px) saturate(110%);
+      border-radius: 36px; 
+      padding: 32px 28px; 
+      border: 1px solid var(--card-border);
+      cursor: pointer; transition: all 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+      box-shadow: inset 0 1px 2px rgba(255,255,255,0.1), inset 0 -1px 2px rgba(0,0,0,0.2), 0 12px 32px rgba(0,0,0,0.4);
       position: relative; overflow: hidden;
-      display: flex; flex-direction: column; height: 100%; min-height: 220px;
+      display: flex; flex-direction: column; height: 100%; min-height: 240px;
+    }
+    .subject-card:hover {
+        transform: translateY(-6px) scale(1.02);
+        background: linear-gradient(135deg, rgba(100, 80, 70, 0.2), rgba(30, 20, 15, 0.4));
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        box-shadow: inset 0 1px 2px rgba(255,255,255,0.2), inset 0 -1px 2px rgba(0,0,0,0.3), 0 20px 48px rgba(0,0,0,0.6);
+        border-radius: 40px;
     }
 
     .unit-card {
-      background: var(--card-bg); border-radius: 14px; border: 1px solid var(--card-border); margin-bottom: 14px;
-      overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.04); transition: transform 0.2s ease;
+      background: var(--glass-bg); 
+      backdrop-filter: blur(24px) saturate(120%);
+      -webkit-backdrop-filter: blur(24px) saturate(120%);
+      border-radius: 28px; 
+      border: 1px solid var(--card-border); 
+      margin-bottom: 20px;
+      overflow: hidden; 
+      box-shadow: inset 0 1px 2px rgba(255,255,255,0.1), 0 8px 24px rgba(0,0,0,0.4); 
+      transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
     }
     .unit-card-header {
       padding: 18px 22px; display: flex; justify-content: space-between; align-items: center; cursor: pointer;
     }
-    .unit-card:hover { transform: translateY(-2px); box-shadow: 0 6px 16px rgba(0,0,0,0.08); }
+    .unit-card:hover { 
+        transform: translateY(-4px) scale(1.01); 
+        background: linear-gradient(145deg, rgba(255,255,255,0.08), rgba(255,255,255,0.03));
+        box-shadow: inset 0 1px 1px rgba(255,255,255,0.1), 0 12px 32px rgba(0,0,0,0.5);
+    }
 
     .filter-btn {
-      background: var(--card-bg); border: 1px solid var(--card-border); color: var(--text-muted); padding: 7px 16px;
-      border-radius: 20px; font-size: 12px; cursor: pointer; transition: all 0.2s;
+      background: var(--glass-bg); border: 1px solid var(--card-border); color: var(--text-secondary); padding: 10px 20px;
+      backdrop-filter: blur(24px) saturate(120%); -webkit-backdrop-filter: blur(24px) saturate(120%);
+      border-radius: 30px; font-size: 12px; cursor: pointer; transition: all 0.3s;
+      box-shadow: inset 0 1px 2px rgba(255,255,255,0.05), 0 4px 12px rgba(0,0,0,0.2);
+    }
+    .filter-btn:hover {
+      background: rgba(255,160,60,0.15);
+      color: var(--text-main);
+      border-color: rgba(255,160,60,0.3);
     }
 
     .section-toggle-container {
-      background: var(--card-bg); border-radius: 50px; padding: 4px; display: inline-flex; border: 1px solid var(--card-border);
+      background: var(--glass-bg); backdrop-filter: blur(24px) saturate(120%); border-radius: 50px; padding: 6px; display: inline-flex; border: 1px solid var(--card-border);
       margin: 20px auto;
+      box-shadow: inset 0 1px 2px rgba(255,255,255,0.1), 0 8px 24px rgba(0,0,0,0.4);
     }
     .section-toggle-btn {
-      padding: 10px 28px; border-radius: 50px; border: none; font-size: 13px; cursor: pointer; transition: all 0.2s;
+      padding: 10px 32px; border-radius: 50px; border: none; font-size: 13px; cursor: pointer; transition: all 0.3s;
       background: transparent; color: var(--text-muted); font-family: 'Inter', sans-serif; font-weight: 500;
+    }
+    .section-toggle-btn.active {
+      background: rgba(40,30,25,0.4);
+      color: var(--text-main);
+      box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+      border: 1px solid rgba(255,255,255,0.1);
     }
     
     .question-card {
-      background: var(--card-bg); border-radius: 12px; border: 1px solid var(--card-border); padding: 16px 20px;
-      margin-bottom: 10px; display: flex; gap: 14px; transition: background 0.2s, opacity 0.3s;
+      background: var(--glass-bg); backdrop-filter: blur(24px) saturate(120%); border-radius: 24px; border: 1px solid var(--card-border); padding: 20px 24px;
+      margin-bottom: 16px; display: flex; gap: 16px; transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+      box-shadow: inset 0 1px 2px rgba(255,255,255,0.08), 0 4px 16px rgba(0,0,0,0.3);
+    }
+    .question-card:hover {
+      transform: translateY(-2px);
+      background: rgba(255,255,255,0.08);
+      box-shadow: inset 0 1px 2px rgba(255,255,255,0.1), 0 8px 24px rgba(0,0,0,0.5);
     }
     
     .shimmer-bg {
-      background: var(--card-border);
+      background: var(--surface);
       position: relative;
       overflow: hidden;
     }
@@ -857,47 +949,23 @@ function App() {
       content: '';
       position: absolute;
       top: 0; left: -100%; width: 50%; height: 100%;
-      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.08), transparent);
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.04), transparent);
       animation: shimmer 1.5s infinite;
-    }
-    body.theme-light .shimmer-bg::after {
-      background: linear-gradient(90deg, transparent, rgba(0,0,0,0.04), transparent);
     }
     @keyframes shimmer { 100% { left: 100%; } }
 
     .app-container { max-width: 960px; margin: 0 auto; padding: 40px 20px; position: relative; }
     @media (max-width: 600px) { .app-container { padding: 20px 16px; } }
     
-    .tag { font-size: 10px; font-weight: 600; padding: 3px 8px; border-radius: 12px; border: 1px solid transparent; }
-
-    .glass-tag {
-      background: rgba(255, 255, 255, 0.1);
-      backdrop-filter: blur(8px);
-      -webkit-backdrop-filter: blur(8px);
-      border: 1px solid rgba(255, 255, 255, 0.2);
-    }
-    body.theme-light .glass-tag {
-      color: #333;
-    }
-    body.theme-focus .glass-tag {
-      color: #cbd5e1;
-    }
+    .tag { font-size: 10px; font-weight: 600; padding: 4px 10px; border-radius: 12px; border: 1px solid transparent; backdrop-filter: blur(4px); }
 
     .glass-header {
-      background: var(--glass-bg);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
+      background: rgba(11, 15, 20, 0.7);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
       border-bottom: 1px solid var(--card-border);
+      transition: all 0.3s;
     }
-
-    .search-input {
-      background: transparent;
-      color: var(--text-main);
-      outline: none;
-      font-family: 'Inter', sans-serif;
-      width: 100%; border: none;
-    }
-    .search-input::placeholder { color: var(--text-muted); }
 
     .difficulty-badge {
       font-size: 10px; font-weight: 800; letter-spacing: 0.5px;
@@ -914,26 +982,17 @@ function App() {
     const strokeDashoffset = circumference - (progress / 100) * circumference;
 
     return (
-      <svg height={radius * 2} width={radius * 2} style={{ transform: 'rotate(-90deg)' }}>
-        <circle stroke="var(--card-border)" fill="transparent" strokeWidth={stroke} r={normalizedRadius} cx={radius} cy={radius} />
-        <motion.circle
-          stroke="url(#golden-gradient)" fill="transparent" strokeWidth={stroke}
+      <svg height={radius * 2} width={radius * 2} style={{ transform: 'rotate(-90deg)', filter: 'drop-shadow(0 0 8px rgba(255,160,60,0.5))' }}>
+        <circle stroke="rgba(255,255,255,0.05)" fill="transparent" strokeWidth={stroke} r={normalizedRadius} cx={radius} cy={radius} />
+        <circle
+          stroke="var(--accent-cyan)" fill="transparent" strokeWidth={stroke}
           strokeDasharray={circumference + ' ' + circumference}
-          animate={{ strokeDashoffset }}
-          transition={{ duration: 1, ease: "easeOut" }}
+          style={{ strokeDashoffset, transition: 'stroke-dashoffset 1s cubic-bezier(0.22, 1, 0.36, 1)' }}
           strokeLinecap="round" r={normalizedRadius} cx={radius} cy={radius}
         />
-        <defs>
-          <linearGradient id="golden-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
-            <stop offset="0%" stopColor="#FB8C00" />
-            <stop offset="100%" stopColor="#FFB74D" />
-          </linearGradient>
-        </defs>
       </svg>
     );
   };
-
-
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -946,105 +1005,44 @@ function App() {
   };
 
   const getTagStyle = (tagStr) => {
-    if (theme === 'focus') {
-      if (tagStr.includes('★★★ Must Do')) return { bg: 'rgba(239, 68, 68, 0.1)', color: '#fca5a5', border: '1px solid rgba(239, 68, 68, 0.2)' };
-      if (tagStr.includes('★★ Important')) return { bg: 'rgba(245, 158, 11, 0.1)', color: '#fcd34d', border: '1px solid rgba(245, 158, 11, 0.2)' };
-      if (tagStr.includes('★ Know')) return { bg: 'rgba(59, 130, 246, 0.1)', color: '#93c5fd', border: '1px solid rgba(59, 130, 246, 0.2)' };
-      return { bg: 'rgba(148, 163, 184, 0.1)', color: '#cbd5e1', border: '1px solid rgba(148, 163, 184, 0.2)' };
-    }
-    if (tagStr.includes('★★★ Must Do')) return { bg: '#fff0f0', color: '#c1121f', border: '1px solid #fecaca' };
-    if (tagStr.includes('★★ Important')) return { bg: '#fff8e6', color: '#b45309', border: '1px solid #fde68a' };
-    if (tagStr.includes('★ Know')) return { bg: '#f0f4ff', color: '#2d5aa0', border: '1px solid #c7d7f5' };
-    return { bg: '#f3f4f6', color: '#4b5563', border: '1px solid #e5e7eb' };
+    if (tagStr.includes('★★★ Must Do')) return { bg: 'rgba(124, 131, 253, 0.15)', color: 'rgba(124, 131, 253, 0.9)', border: '1px solid rgba(124, 131, 253, 0.2)' };
+    if (tagStr.includes('★★ Important')) return { bg: 'rgba(79, 209, 197, 0.15)', color: 'rgba(79, 209, 197, 0.9)', border: '1px solid rgba(79, 209, 197, 0.2)' };
+    if (tagStr.includes('★ Know')) return { bg: 'rgba(255, 255, 255, 0.08)', color: 'rgba(255, 255, 255, 0.6)', border: '1px solid rgba(255, 255, 255, 0.1)' };
+    return { bg: 'rgba(255, 255, 255, 0.05)', color: 'var(--text-muted)', border: '1px solid var(--card-border)' };
   };
 
   const getTypeStyle = (typeStr) => {
-    if (theme === 'focus') {
-      if (typeStr.includes('Theory+Problem')) return { bg: 'rgba(249, 115, 22, 0.15)', color: '#fdba74' };
-      if (typeStr.includes('Theory')) return { bg: 'rgba(168, 85, 247, 0.15)', color: '#d8b4fe' };
-      if (typeStr.includes('Problem')) return { bg: 'rgba(34, 197, 94, 0.15)', color: '#86efac' };
-      if (typeStr.includes('Algorithm')) return { bg: 'rgba(56, 189, 248, 0.15)', color: '#7dd3fc' };
-      return { bg: 'rgba(148, 163, 184, 0.15)', color: '#cbd5e1' };
-    }
-    if (typeStr.includes('Theory+Problem')) return { bg: '#fff3e0', color: '#e65100' };
-    if (typeStr.includes('Theory')) return { bg: '#f3e5f5', color: '#6a1b9a' };
-    if (typeStr.includes('Problem')) return { bg: '#e8f5e9', color: '#2e7d32' };
-    if (typeStr.includes('Algorithm')) return { bg: '#e3f2fd', color: '#1565c0' };
-    return { bg: '#f3f4f6', color: '#4b5563' };
+    if (typeStr.includes('Problem')) return { bg: 'rgba(110, 231, 183, 0.15)', color: 'rgba(110, 231, 183, 0.9)' };
+    if (typeStr.includes('Theory')) return { bg: 'rgba(255, 255, 255, 0.08)', color: 'rgba(255, 255, 255, 0.7)' };
+    return { bg: 'rgba(255, 255, 255, 0.05)', color: 'var(--text-muted)' };
   };
 
   const getMarksStyle = (marks) => {
-    if (marks === 10) return { bg: theme === 'focus' ? 'rgba(239, 68, 68, 0.1)' : '#fef2f2', color: theme === 'focus' ? '#fca5a5' : '#991b1b' };
-    return { bg: theme === 'focus' ? 'rgba(34, 197, 94, 0.1)' : '#f0fdf4', color: theme === 'focus' ? '#86efac' : '#166534' };
+    return { bg: 'rgba(255, 255, 255, 0.05)', color: 'rgba(255, 255, 255, 0.7)' };
   };
 
   function SubjectCard({ subject, onClick }) {
-    const cardRef = React.useRef(null);
-
-    function handleMouseMove(e) {
-      const card = cardRef.current;
-      const rect = card.getBoundingClientRect();
-      const x = e.clientX - rect.left;
-      const y = e.clientY - rect.top;
-      const cx = rect.width / 2;
-      const cy = rect.height / 2;
-      const rotateX = ((y - cy) / cy) * -10;
-      const rotateY = ((x - cx) / cx) * 10;
-      card.style.transform = `perspective(800px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.03)`;
-    }
-
-    function handleMouseLeave() {
-      cardRef.current.style.transform = 'perspective(800px) rotateX(0deg) rotateY(0deg) scale(1)';
-    }
-
     const { done, total } = getSubjectDoneCount(subject, doneQuestions);
     const pct = total > 0 ? Math.round((done / total) * 100) : 0;
-    const isDark = theme === 'focus';
-
-    const getSubjectColors = (subjectId) => {
-      switch (subjectId) {
-        case 'ps': return { bg: '#EEF2FF', text: '#3730A3' };
-        case 'fm': return { bg: '#F0FDF4', text: '#166534' };
-        case 'ads': return { bg: '#FFF7ED', text: '#9A3412' };
-        case 'se': return { bg: '#EFF6FF', text: '#1E40AF' };
-        case 'os': return { bg: '#FDF4FF', text: '#7E22CE' };
-        default: return { bg: '#ffffff', text: '#333333' };
-      }
-    };
-
-    const { bg: cardBg, text: cardText } = getSubjectColors(subject.id);
 
     return (
-      <div
-        ref={cardRef}
-        onClick={onClick}
-        onMouseMove={handleMouseMove}
-        onMouseLeave={handleMouseLeave}
-        style={{
-          background: cardBg,
-          border: '1px solid var(--card-border)',
-          borderRadius: '20px', padding: '28px',
-          cursor: 'pointer', transition: 'transform 0.1s ease',
-          position: 'relative', overflow: 'hidden',
-          display: 'flex', flexDirection: 'column', height: '100%', minHeight: '220px'
-        }}
-      >
-        <h3 style={{ color: cardText, fontWeight: 600, fontSize: '18px', marginBottom: '8px', opacity: 1, filter: 'none', letterSpacing: '-0.01em' }}>
+      <div className="subject-card" onClick={onClick}>
+        <h3 style={{ color: 'var(--text-main)', fontWeight: 600, fontSize: '18px', marginBottom: '8px', opacity: 1, filter: 'none', letterSpacing: '-0.01em' }}>
           {subject.name}
         </h3>
-        <p style={{ color: 'var(--text-muted)', fontSize: '13px', marginBottom: '20px' }}>
+        <p style={{ color: 'var(--text-secondary)', fontSize: '13px', marginBottom: '20px' }}>
           {total} Questions · 5 Units
         </p>
 
         <div style={{
-          background: isDark ? 'rgba(255,255,255,0.08)' : 'var(--card-border)',
-          borderRadius: '999px', height: '6px', overflow: 'hidden', marginBottom: '10px'
+          background: 'rgba(0,0,0,0.3)',
+          borderRadius: '999px', height: '6px', overflow: 'hidden', marginBottom: '10px',
+          boxShadow: 'inset 0 1px 3px rgba(0,0,0,0.5)'
         }}>
           <div style={{
             width: `${pct}%`, height: '100%',
-            background: isDark ? 'linear-gradient(90deg, #7c3aed, #06b6d4)' : subject.color,
-            borderRadius: '999px', transition: 'width 0.6s ease',
-            boxShadow: isDark ? '0 0 8px rgba(124,58,237,0.6)' : 'none'
+            background: 'var(--accent-cyan)',
+            borderRadius: '999px', transition: 'width 0.6s cubic-bezier(0.22, 1, 0.36, 1)'
           }} />
         </div>
 
@@ -1078,20 +1076,20 @@ function App() {
   );
 
   const GlobalHeader = () => (
-    <header style={{
+    <header className="glass-header" style={{
       position: "fixed", top: 0, right: 0, left: 0,
       zIndex: 110, display: "flex", gap: "10px",
       alignItems: "center", justifyContent: "flex-end",
       padding: "12px 20px",
-      background: "transparent",
-      pointerEvents: "none"
+      pointerEvents: "none",
+      boxShadow: "0 4px 30px rgba(0,0,0,0.3)"
     }}>
       <div style={{ display: "flex", gap: "10px", pointerEvents: "auto" }}>
-        <button onClick={resetProgress} style={{ width: 40, height: 40, borderRadius: "50%", background: "var(--glass-bg)", border: "1px solid var(--card-border)", display: "flex", alignItems: "center", justifyContent: "center", cursor: "pointer", color: "var(--text-main)", backdropFilter: 'blur(12px)', WebkitBackdropFilter: 'blur(12px)', boxShadow: "0 4px 15px rgba(0,0,0,0.05)" }} title="Reset Progress">
+        <button onClick={resetProgress} style={{ width: 40, height: 40, borderRadius: "50%", background: "var(--surface)", border: "1px solid var(--card-border)", display: "flex", alignItems: "center", justifyContent: "center", cursor: "pointer", color: "var(--text-secondary)", transition: "all 0.3s", boxShadow: "inset 0 1px 1px rgba(255,255,255,0.05)" }} title="Reset Progress" onMouseEnter={(e) => { e.currentTarget.style.color = "var(--text-main)"; e.currentTarget.style.background = "var(--glass-bg)"; }} onMouseLeave={(e) => { e.currentTarget.style.color = "var(--text-secondary)"; e.currentTarget.style.background = "var(--surface)"; }}>
           <X size={18} />
         </button>
-        <button onClick={() => setTheme(t => t === 'light' ? 'focus' : 'light')} style={{ width: 40, height: 40, borderRadius: "50%", background: "var(--glass-bg)", border: "1px solid var(--card-border)", display: "flex", alignItems: "center", justifyContent: "center", cursor: "pointer", color: "var(--text-main)", backdropFilter: 'blur(12px)', WebkitBackdropFilter: 'blur(12px)', boxShadow: "0 4px 15px rgba(0,0,0,0.05)" }}>
-          {theme === 'light' ? <Moon size={18} /> : <Sun size={18} />}
+        <button onClick={() => { }} style={{ width: 40, height: 40, borderRadius: "50%", background: "var(--surface)", border: "1px solid var(--card-border)", display: "flex", alignItems: "center", justifyContent: "center", cursor: "pointer", color: "var(--text-secondary)", transition: "all 0.3s", boxShadow: "inset 0 1px 1px rgba(255,255,255,0.05)" }} title="Premium Theme" onMouseEnter={(e) => { e.currentTarget.style.color = "var(--text-main)"; e.currentTarget.style.background = "var(--glass-bg)"; }} onMouseLeave={(e) => { e.currentTarget.style.color = "var(--text-secondary)"; e.currentTarget.style.background = "var(--surface)"; }}>
+          <Moon size={18} />
         </button>
       </div>
     </header>
@@ -1135,7 +1133,7 @@ function App() {
             style={{
               fontSize: 'clamp(48px, 8vw, 96px)',
               fontWeight: 900, lineHeight: 1.05,
-              background: 'linear-gradient(135deg, #ffffff 0%, #a78bfa 40%, #06b6d4 100%)',
+              background: 'linear-gradient(135deg, #ffffff 0%, rgba(255,255,255,0.6) 100%)',
               WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent',
               backgroundClip: 'text',
               marginBottom: '24px', letterSpacing: '-2px'
@@ -1149,7 +1147,7 @@ function App() {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.3 }}
             style={{
-              fontSize: '18px', color: '#f0f0f0',
+              fontSize: '18px', color: 'var(--text-secondary)',
               maxWidth: '480px', lineHeight: 1.7, marginBottom: '48px',
               margin: '0 auto 48px auto'
             }}>
@@ -1163,22 +1161,7 @@ function App() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5 }}
             onClick={() => setView('dashboard')}
-            style={{
-              background: 'linear-gradient(135deg, #7c3aed, #06b6d4)',
-              border: 'none', borderRadius: '12px',
-              padding: '16px 40px', fontSize: '16px', fontWeight: 700,
-              color: 'white', cursor: 'pointer',
-              boxShadow: '0 0 30px rgba(124,58,237,0.5), 0 0 60px rgba(6,182,212,0.2)',
-              transition: 'transform 0.2s, box-shadow 0.2s',
-            }}
-            onMouseEnter={e => {
-              e.currentTarget.style.transform = 'scale(1.05)';
-              e.currentTarget.style.boxShadow = '0 0 50px rgba(124,58,237,0.7), 0 0 80px rgba(6,182,212,0.3)';
-            }}
-            onMouseLeave={e => {
-              e.currentTarget.style.transform = 'scale(1)';
-              e.currentTarget.style.boxShadow = '0 0 30px rgba(124,58,237,0.5), 0 0 60px rgba(6,182,212,0.2)';
-            }}
+            className="landing-btn"
           >
             Begin Study Session →
           </motion.button>
@@ -1211,32 +1194,32 @@ function App() {
             { label: 'Units Each', value: '5' },
             { label: 'Max Marks', value: '5M' },
           ].map(stat => (
-            <div key={stat.label} style={{
-              background: 'var(--card-bg)',
+            <div key={stat.label} className="reveal" style={{
+              background: 'var(--glass-bg)',
+              backdropFilter: 'blur(32px) saturate(130%)',
+              WebkitBackdropFilter: 'blur(32px) saturate(130%)',
               border: '1px solid var(--card-border)',
-              borderRadius: '16px', padding: '20px 32px',
-              textAlign: 'center', minWidth: '120px'
+              borderRadius: '40px', padding: '32px 32px',
+              textAlign: 'center', minWidth: '130px',
+              boxShadow: 'inset 0 1px 3px rgba(255,255,255,0.1), 0 16px 40px rgba(0,0,0,0.5)'
             }}>
               <div style={{
-                fontSize: '32px', fontWeight: 900,
-                background: 'linear-gradient(135deg, #a78bfa, #06b6d4)',
-                WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent',
-                backgroundClip: 'text'
+                fontSize: '32px', fontWeight: 900, color: 'var(--text-main)', letterSpacing: '-1px'
               }}>{stat.value}</div>
-              <div style={{ color: 'var(--text-muted)', fontSize: '13px', marginTop: '4px' }}>
+              <div style={{ color: 'var(--text-secondary)', fontSize: '13px', marginTop: '4px' }}>
                 {stat.label}
               </div>
             </div>
           ))}
         </motion.div>
 
-        <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} style={{ display: "flex", gap: "10px", flexWrap: "wrap", marginBottom: "32px" }}>
+        <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} style={{ display: "flex", gap: "10px", flexWrap: "wrap", marginBottom: "32px", justifyContent: "center" }}>
           {SUBJECTS.map((sub, i) => {
             const { done, total } = getSubjectDoneCount(sub, doneQuestions);
             const pct = Math.round((done / total) * 100);
             return (
-              <div key={i} style={{ background: "var(--card-bg)", border: "1px solid var(--card-border)", padding: "6px 12px", borderRadius: "20px", fontSize: "11px", fontWeight: 500, color: "var(--text-muted)", backdropFilter: "blur(8px)" }}>
-                {sub.shortName} <span style={{ color: theme === 'focus' ? '#fbbf24' : sub.color, marginLeft: 4 }}>{pct}% done</span>
+              <div key={i} className="reveal" style={{ background: "var(--surface)", border: "1px solid var(--card-border)", padding: "10px 20px", borderRadius: "24px", fontSize: "12px", fontWeight: 500, color: "var(--text-secondary)", backdropFilter: "blur(24px) saturate(120%)" }}>
+                {sub.shortName} <span style={{ color: "var(--accent-cyan)", marginLeft: 6 }}>{pct}% done</span>
               </div>
             );
           })}
@@ -1273,7 +1256,7 @@ function App() {
 
         <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} style={{ display: "flex", gap: "10px", marginTop: "24px", flexWrap: "wrap" }}>
           {["5 Units", `${total} Questions`, `${totalDone} Done`].map((txt, i) => (
-            <div key={i} style={{ background: "var(--card-bg)", border: "1px solid var(--card-border)", padding: "5px 12px", borderRadius: "20px", fontSize: "12px", color: "var(--text-muted)", fontWeight: 500 }}>
+            <div key={i} className="glass-tag" style={{ padding: "6px 14px", borderRadius: "20px", fontSize: "12px", color: "var(--text-secondary)", fontWeight: 500 }}>
               {txt}
             </div>
           ))}
@@ -1338,14 +1321,12 @@ function App() {
             <div className="section-toggle-container">
               <button
                 className={`section-toggle-btn ${activeSection === '2m' ? 'active' : ''}`}
-                style={activeSection === '2m' ? { background: theme === 'focus' ? '#fbbf24' : sub.color, color: theme === 'focus' ? '#0f172a' : 'white', boxShadow: "0 2px 10px rgba(0,0,0,0.1)" } : {}}
                 onClick={() => { setActiveSection('2m'); setActiveFilter('all'); }}
               >
                 2 Mark Questions
               </button>
               <button
                 className={`section-toggle-btn ${activeSection === 'long' ? 'active' : ''}`}
-                style={activeSection === 'long' ? { background: theme === 'focus' ? '#fbbf24' : sub.color, color: theme === 'focus' ? '#0f172a' : 'white', boxShadow: "0 2px 10px rgba(0,0,0,0.1)" } : {}}
                 onClick={() => { setActiveSection('long'); setActiveFilter('all'); }}
               >
                 Long Answers
@@ -1363,8 +1344,8 @@ function App() {
                 <span style={{ fontSize: "16px", fontWeight: "900", color: "#FB8C00" }}>{Math.round((unitDoneCount / unitTotalQuestions) * 100)}%</span>
               </div>
             </div>
-            <div style={{ height: 6, background: "var(--card-border)", borderRadius: 3, overflow: "hidden", marginBottom: "20px", boxShadow: "inset 0 1px 2px rgba(0,0,0,0.05)" }}>
-              <motion.div initial={{ width: 0 }} animate={{ width: `${(unitDoneCount / unitTotalQuestions) * 100}%` }} transition={{ duration: 0.8, ease: [0.4, 0, 0.2, 1] }} style={{ height: "100%", background: 'linear-gradient(90deg, #FB8C00, #FFB74D)', boxShadow: "0 0 10px rgba(251, 140, 0, 0.4)" }} />
+            <div style={{ height: 6, background: "rgba(0,0,0,0.3)", borderRadius: 3, overflow: "hidden", marginBottom: "20px", boxShadow: "inset 0 1px 3px rgba(0,0,0,0.5)" }}>
+              <motion.div initial={{ width: 0 }} animate={{ width: `${(unitDoneCount / unitTotalQuestions) * 100}%` }} transition={{ duration: 0.8, ease: [0.4, 0, 0.2, 1] }} style={{ height: "100%", background: 'var(--accent-cyan)', boxShadow: "0 0 10px rgba(79, 209, 197, 0.4)" }} />
             </div>
             <div style={{ display: "flex", gap: "8px", overflowX: "auto", paddingBottom: "4px", scrollbarWidth: "none" }}>
               {[
@@ -1376,7 +1357,7 @@ function App() {
                 <button
                   key={f.id}
                   className="filter-btn"
-                  style={activeFilter === f.id ? { background: theme === 'focus' ? 'rgba(251, 191, 36, 0.2)' : sub.color, borderColor: theme === 'focus' ? '#fbbf24' : sub.color, color: theme === 'focus' ? '#fbbf24' : 'white' } : { whiteSpace: "nowrap" }}
+                  style={activeFilter === f.id ? { background: 'var(--surface)', borderColor: 'var(--accent-cyan)', color: 'var(--text-main)', whiteSpace: "nowrap" } : { whiteSpace: "nowrap" }}
                   onClick={() => setActiveFilter(f.id)}
                 >
                   {f.label}
@@ -1412,15 +1393,14 @@ function App() {
                       style={{ opacity: isDone ? 0.6 : 1 }}
                     >
                       <div style={{ width: "32px", display: "flex", flexDirection: "column", alignItems: "center", flexShrink: 0 }}>
-                        <div style={{ width: 32, height: 32, borderRadius: "50%", background: "transparent", color: "var(--text-muted)", display: "flex", alignItems: "center", justifyContent: "center", fontSize: "13px", fontWeight: "bold", marginBottom: 12, border: "1px solid var(--card-border)" }}>
+                        <div style={{ width: 32, height: 32, borderRadius: "50%", background: "transparent", color: "var(--text-secondary)", display: "flex", alignItems: "center", justifyContent: "center", fontSize: "13px", fontWeight: "bold", marginBottom: 12, border: "1px solid var(--card-border)" }}>
                           {trueIdx + 1}
                         </div>
-                        <motion.div whileTap={{ scale: 1.2 }} style={{ cursor: "pointer" }} onClick={() => toggleDone(sub.id, selectedUnit, activeSection, trueIdx)}>
-                          {isDone ?
-                            <div style={{ width: 22, height: 22, background: theme === 'focus' ? '#fbbf24' : sub.color, borderRadius: 6, display: "flex", alignItems: "center", justifyContent: "center", boxShadow: "0 2px 8px rgba(0,0,0,0.1)" }}><Check size={14} color={theme === 'light' ? 'white' : '#0f172a'} strokeWidth={3} /></div> :
-                            <div style={{ width: 22, height: 22, border: "2px solid var(--text-muted)", borderRadius: 6, opacity: 0.5 }}></div>
-                          }
-                        </motion.div>
+                        <div style={{ cursor: "pointer", transition: "transform 0.2s" }} onClick={() => toggleDone(sub.id, selectedUnit, activeSection, trueIdx)} onMouseEnter={e => e.currentTarget.style.transform = 'scale(1.1)'} onMouseLeave={e => e.currentTarget.style.transform = 'scale(1)'}>
+                          <div style={{ width: 26, height: 26, background: isDone ? 'var(--accent-cyan)' : 'rgba(20,15,10,0.4)', border: isDone ? 'none' : '1px solid rgba(255,255,255,0.15)', borderRadius: '10px', display: 'flex', alignItems: 'center', justifyContent: 'center', transition: 'all 0.3s cubic-bezier(0.22, 1, 0.36, 1)', boxShadow: isDone ? 'inset 0 1px 3px rgba(255,255,255,0.4), 0 0 12px rgba(255,160,60,0.6)' : 'inset 0 2px 4px rgba(0,0,0,0.5)' }}>
+                            {isDone && <Check size={16} color="#1a1615" strokeWidth={3} />}
+                          </div>
+                        </div>
                       </div>
                       <div style={{ flex: 1, paddingLeft: 8 }}>
                         <div style={{ fontSize: "14px", color: "var(--text-main)", lineHeight: 1.7, textDecoration: isDone ? "line-through" : "none", transition: "all 0.3s" }}>
